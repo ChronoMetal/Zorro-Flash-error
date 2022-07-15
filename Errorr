@@ -1,0 +1,950 @@
+Processing RadioMaster_Zorro_2400_TX_via_ETX (platform: espressif32@3.3.2; board: esp32dev; framework: arduino)
+--------------------------------------------------------------------------------
+Verbose mode can be enabled via `-v, --verbose` option
+UID bytes: 129,205,93,79,168,20
+***CONFIGURATION: https://docs.platformio.org/page/boards/espressif32/esp32dev.html
+PLATFORM: Espressif 32 (3.3.2) > Espressif ESP32 Dev Module
+HARDWARE: ESP32 240MHz, 320KB RAM, 4MB Flash
+DEBUG: Current (esp-prog) External (esp-prog, iot-bus-jtag, jlink, minimodule, olimex-arm-usb-ocd, olimex-arm-usb-ocd-h, olimex-arm-usb-tiny-h, olimex-jtag-tiny, tumpa)
+PACKAGES: 
+ - framework-arduinoespressif32 @ 3.10006.210326 (1.0.6) 
+ - tool-esptoolpy @ 1.30100.210531 (3.1.0) 
+ - tool-mkspiffs @ 2.230.0 (2.30) 
+ - toolchain-xtensa32 @ 2.50200.97 (5.2.0)
+LDF: Library Dependency Finder -> https://bit.ly/configure-pio-ldf
+LDF Modes: Finder ~ chain, Compatibility ~ soft
+Found 68 compatible libraries
+Scanning dependencies...
+Dependency Graph
+|-- NeoPixelBus @ 2.7.0
+|   |-- SPI @ 1.0
+|-- ESPAsyncWebServer-esphome @ 2.1.0
+|   |-- AsyncTCP-esphome @ 1.2.2
+|   |-- FS @ 1.0
+|   |-- WiFi @ 1.0
+|-- ESP32-BLE-Gamepad @ 0.3.4
+|   |-- NimBLE-Arduino @ 1.4.0
+|-- NimBLE-Arduino @ 1.4.0
+|-- SX1280Driver
+|   |-- logging
+|   |-- SPI @ 1.0
+|-- CONFIG
+|   |-- EEPROM
+|   |   |-- logging
+|   |   |-- EEPROM @ 1.0.3
+|   |   |-- Wire @ 1.0.1
+|   |-- logging
+|   |-- OTA
+|   |   |-- CRSF
+|   |   |   |-- CRC
+|   |   |   |-- CrsfProtocol
+|   |   |   |   |-- CRC
+|   |   |   |-- MSP
+|   |   |   |   |-- logging
+|   |   |   |-- TelemetryProtocol
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- FIFO
+|   |   |   |   |-- logging
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|-- CRSF
+|   |-- CRC
+|   |-- CrsfProtocol
+|   |   |-- CRC
+|   |-- MSP
+|   |   |-- logging
+|   |-- TelemetryProtocol
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- FIFO
+|   |   |-- logging
+|   |-- helpers
+|   |-- logging
+|-- Backpack
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CONFIG
+|   |   |-- EEPROM
+|   |   |   |-- logging
+|   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |-- Wire @ 1.0.1
+|   |   |-- logging
+|   |   |-- OTA
+|   |   |   |-- CRSF
+|   |   |   |   |-- CRC
+|   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |-- CRC
+|   |   |   |   |-- MSP
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- FIFO
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- CRSF
+|   |   |-- CRC
+|   |   |-- CrsfProtocol
+|   |   |   |-- CRC
+|   |   |-- MSP
+|   |   |   |-- logging
+|   |   |-- TelemetryProtocol
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- FIFO
+|   |   |   |-- logging
+|   |   |-- helpers
+|   |   |-- logging
+|   |-- HWTIMER
+|   |   |-- logging
+|   |-- MSP
+|   |   |-- logging
+|   |-- SX1280Driver
+|   |   |-- logging
+|   |   |-- SPI @ 1.0
+|-- BLE
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CRSF
+|   |   |-- CRC
+|   |   |-- CrsfProtocol
+|   |   |   |-- CRC
+|   |   |-- MSP
+|   |   |   |-- logging
+|   |   |-- TelemetryProtocol
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- FIFO
+|   |   |   |-- logging
+|   |   |-- helpers
+|   |   |-- logging
+|   |-- HWTIMER
+|   |   |-- logging
+|   |-- logging
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|   |-- ESP32-BLE-Gamepad @ 0.3.4
+|   |   |-- NimBLE-Arduino @ 1.4.0
+|-- BUTTON
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- logging
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|-- BUZZER
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- helpers
+|   |-- logging
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|-- GSENSOR
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CONFIG
+|   |   |-- EEPROM
+|   |   |   |-- logging
+|   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |-- Wire @ 1.0.1
+|   |   |-- logging
+|   |   |-- OTA
+|   |   |   |-- CRSF
+|   |   |   |   |-- CRC
+|   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |-- CRC
+|   |   |   |   |-- MSP
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- FIFO
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- logging
+|   |-- Wire @ 1.0.1
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|-- LED
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CrsfProtocol
+|   |   |-- CRC
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|   |-- logging
+|   |-- NeoPixelBus @ 2.7.0
+|   |   |-- SPI @ 1.0
+|-- LUA
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CONFIG
+|   |   |-- EEPROM
+|   |   |   |-- logging
+|   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |-- Wire @ 1.0.1
+|   |   |-- logging
+|   |   |-- OTA
+|   |   |   |-- CRSF
+|   |   |   |   |-- CRC
+|   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |-- CRC
+|   |   |   |   |-- MSP
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- FIFO
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- CRSF
+|   |   |-- CRC
+|   |   |-- CrsfProtocol
+|   |   |   |-- CRC
+|   |   |-- MSP
+|   |   |   |-- logging
+|   |   |-- TelemetryProtocol
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- FIFO
+|   |   |   |-- logging
+|   |   |-- helpers
+|   |   |-- logging
+|   |-- HWTIMER
+|   |   |-- logging
+|   |-- logging
+|   |-- OTA
+|   |   |-- CRSF
+|   |   |   |-- CRC
+|   |   |   |-- CrsfProtocol
+|   |   |   |   |-- CRC
+|   |   |   |-- MSP
+|   |   |   |   |-- logging
+|   |   |   |-- TelemetryProtocol
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- FIFO
+|   |   |   |   |-- logging
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|   |-- SX1280Driver
+|   |   |-- logging
+|   |   |-- SPI @ 1.0
+|   |-- CrsfProtocol
+|   |   |-- CRC
+|-- POWER_DETECT
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- logging
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|-- SCREEN
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CONFIG
+|   |   |-- EEPROM
+|   |   |   |-- logging
+|   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |-- Wire @ 1.0.1
+|   |   |-- logging
+|   |   |-- OTA
+|   |   |   |-- CRSF
+|   |   |   |   |-- CRC
+|   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |-- CRC
+|   |   |   |   |-- MSP
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- FIFO
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|   |-- GSENSOR
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- CONFIG
+|   |   |   |-- EEPROM
+|   |   |   |   |-- logging
+|   |   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- logging
+|   |   |   |-- OTA
+|   |   |   |   |-- CRSF
+|   |   |   |   |   |-- CRC
+|   |   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |   |-- CRC
+|   |   |   |   |   |-- MSP
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |   |-- DEVICE
+|   |   |   |   |   |   |-- helpers
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |   |-- FIFO
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |-- POWERMGNT
+|   |   |   |   |-- DAC
+|   |   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- helpers
+|   |   |-- logging
+|   |   |-- Wire @ 1.0.1
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- HWTIMER
+|   |   |-- logging
+|   |-- logging
+|   |-- THERMAL
+|   |   |-- Wire @ 1.0.1
+|   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- CONFIG
+|   |   |   |-- EEPROM
+|   |   |   |   |-- logging
+|   |   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- logging
+|   |   |   |-- OTA
+|   |   |   |   |-- CRSF
+|   |   |   |   |   |-- CRC
+|   |   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |   |-- CRC
+|   |   |   |   |   |-- MSP
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |   |-- DEVICE
+|   |   |   |   |   |   |-- helpers
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |   |-- FIFO
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |-- POWERMGNT
+|   |   |   |   |-- DAC
+|   |   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- helpers
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- Wire @ 1.0.1
+|   |-- SPI @ 1.0
+|-- THERMAL
+|   |-- Wire @ 1.0.1
+|   |-- logging
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CONFIG
+|   |   |-- EEPROM
+|   |   |   |-- logging
+|   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |-- Wire @ 1.0.1
+|   |   |-- logging
+|   |   |-- OTA
+|   |   |   |-- CRSF
+|   |   |   |   |-- CRC
+|   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |-- CRC
+|   |   |   |   |-- MSP
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- FIFO
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|-- VTX
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CONFIG
+|   |   |-- EEPROM
+|   |   |   |-- logging
+|   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |-- Wire @ 1.0.1
+|   |   |-- logging
+|   |   |-- OTA
+|   |   |   |-- CRSF
+|   |   |   |   |-- CRC
+|   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |-- CRC
+|   |   |   |   |-- MSP
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- FIFO
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- CRSF
+|   |   |-- CRC
+|   |   |-- CrsfProtocol
+|   |   |   |-- CRC
+|   |   |-- MSP
+|   |   |   |-- logging
+|   |   |-- TelemetryProtocol
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- FIFO
+|   |   |   |-- logging
+|   |   |-- helpers
+|   |   |-- logging
+|   |-- logging
+|   |-- MSP
+|   |   |-- logging
+|-- WIFI
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- CONFIG
+|   |   |-- EEPROM
+|   |   |   |-- logging
+|   |   |   |-- EEPROM @ 1.0.3
+|   |   |   |-- Wire @ 1.0.1
+|   |   |-- logging
+|   |   |-- OTA
+|   |   |   |-- CRSF
+|   |   |   |   |-- CRC
+|   |   |   |   |-- CrsfProtocol
+|   |   |   |   |   |-- CRC
+|   |   |   |   |-- MSP
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- TelemetryProtocol
+|   |   |   |   |-- DEVICE
+|   |   |   |   |   |-- helpers
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |   |-- logging
+|   |   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |   |-- FIFO
+|   |   |   |   |   |-- logging
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |-- POWERMGNT
+|   |   |   |-- DAC
+|   |   |   |   |-- Wire @ 1.0.1
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |-- DEVICE
+|   |   |   |   |-- helpers
+|   |   |   |   |-- logging
+|   |   |   |   |-- SX1280Driver
+|   |   |   |   |   |-- logging
+|   |   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |   |-- helpers
+|   |-- helpers
+|   |-- HWTIMER
+|   |   |-- logging
+|   |-- logging
+|   |-- POWERMGNT
+|   |   |-- DAC
+|   |   |   |-- Wire @ 1.0.1
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |   |-- helpers
+|   |-- SX1280Driver
+|   |   |-- logging
+|   |   |-- SPI @ 1.0
+|   |-- DNSServer @ 1.1.0
+|   |   |-- WiFi @ 1.0
+|   |-- ESPAsyncWebServer-esphome @ 2.1.0
+|   |   |-- AsyncTCP-esphome @ 1.2.2
+|   |   |-- FS @ 1.0
+|   |   |-- WiFi @ 1.0
+|   |-- ESPmDNS @ 1.0
+|   |   |-- WiFi @ 1.0
+|   |-- Update @ 1.0
+|   |-- WiFi @ 1.0
+|-- FHSS
+|   |-- SX1280Driver
+|   |   |-- logging
+|   |   |-- SPI @ 1.0
+|   |-- logging
+|-- helpers
+|-- HWTIMER
+|   |-- logging
+|-- logging
+|-- LQCALC
+|-- MSP
+|   |-- logging
+|-- POWERMGNT
+|   |-- DAC
+|   |   |-- Wire @ 1.0.1
+|   |   |-- helpers
+|   |   |-- logging
+|   |-- DEVICE
+|   |   |-- helpers
+|   |   |-- logging
+|   |   |-- SX1280Driver
+|   |   |   |-- logging
+|   |   |   |-- SPI @ 1.0
+|   |-- SX1280Driver
+|   |   |-- logging
+|   |   |-- SPI @ 1.0
+|   |-- helpers
+|-- StubbornReceiver
+|-- StubbornSender
+|-- TelemetryProtocol
+|-- OTA
+|   |-- CRSF
+|   |   |-- CRC
+|   |   |-- CrsfProtocol
+|   |   |   |-- CRC
+|   |   |-- MSP
+|   |   |   |-- logging
+|   |   |-- TelemetryProtocol
+|   |   |-- DEVICE
+|   |   |   |-- helpers
+|   |   |   |-- logging
+|   |   |   |-- SX1280Driver
+|   |   |   |   |-- logging
+|   |   |   |   |-- SPI @ 1.0
+|   |   |-- FIFO
+|   |   |   |-- logging
+|   |   |-- helpers
+|   |   |-- logging
+Building in release mode
+PLATFORM : 'espressif32'
+BUILD ENV: 'RADIOMASTER_ZORRO_2400_TX_VIA_ETX'
+Retrieving maximum program size .pio\build\RadioMaster_Zorro_2400_TX_via_ETX\firmware.elf
+Checking size .pio\build\RadioMaster_Zorro_2400_TX_via_ETX\firmware.elf
+Advanced Memory Usage is available via "PlatformIO Home > Project Inspect"
+RAM:   [==        ]  16.7% (used 54668 bytes from 327680 bytes)
+Flash: [======    ]  57.0% (used 1120773 bytes from 1966080 bytes)
+init_passthrough(["upload"], [".pio\build\RadioMaster_Zorro_2400_TX_via_ETX\firmware.bin"])
+Auto-detected: COM9
+======== PASSTHROUGH INIT ========
+  Trying to initialize COM9 @ 460800
+*** [upload] ExpectTimeout : 
+Traceback (most recent call last):
+  File "C:\Users\gavco\.platformio\packages\tool-scons\scons-local-4.3.0\SCons\Action.py", line 1279, in execute
+    result = self.execfunction(target=target, source=rsources, env=env)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavco\AppData\Roaming\ExpressLRS Configurator\firmwares\github\ExpressLRS\src\python\ETXinitPassthrough.py", line 56, in init_passthrough
+    etx_passthrough_init(port, env['UPLOAD_SPEED'])
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavco\AppData\Roaming\ExpressLRS Configurator\firmwares\github\ExpressLRS\src\python\ETXinitPassthrough.py", line 24, in etx_passthrough_init
+    rl.expect_bytes(b"set: ", timeout=1.0)
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavco\AppData\Roaming\ExpressLRS Configurator\firmwares\github\ExpressLRS\src\python\external\streamexpect.py", line 516, in expect_bytes
+    return self.expect(BytesSearcher(b), timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavco\AppData\Roaming\ExpressLRS Configurator\firmwares\github\ExpressLRS\src\python\external\streamexpect.py", line 666, in expect
+    incoming = self._stream_adapter.poll(end - time.time())
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\gavco\AppData\Roaming\ExpressLRS Configurator\firmwares\github\ExpressLRS\src\python\external\streamexpect.py", line 455, in poll
+    raise ExpectTimeout()
+    ^^^^^^^^^^^^^^^^^^^^^
+external.streamexpect.ExpectTimeout
+========================= [FAILED] Took 16.00 seconds =========================
+
+Environment                        Status    Duration
+---------------------------------  --------  ------------
+RadioMaster_Zorro_2400_TX_via_ETX  FAILED    00:00:15.998
+==================== 1 failed, 0 succeeded in 00:00:15.998 ====================
